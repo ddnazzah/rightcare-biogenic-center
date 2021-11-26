@@ -2,10 +2,10 @@
  * @Author: Dieu-Donne Nazzah
  * @Date: 2021-08-02 16:59:05
  * @Last Modified by: Dieu-Donne Nazzah
- * @Last Modified time: 2021-11-17 23:41:42
+ * @Last Modified time: 2021-11-21 02:26:14
  */
 
-import R from 'ramda';
+import * as R from 'ramda';
 
 /**
  * this function takes care of undefined and null as part of empty

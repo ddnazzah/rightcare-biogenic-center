@@ -2,7 +2,7 @@
  * @Author: Dieu-Donne Nazzah
  * @Date: 2021-04-16 23:42:52
  * @Last Modified by: Dieu-Donne Nazzah
- * @Last Modified time: 2021-10-28 17:31:59
+ * @Last Modified time: 2021-11-19 21:16:12
  */
 
 export const Constants = {
@@ -19,31 +19,22 @@ export const Constants = {
 				BLACK: '#121212',
 				SUCCESS: '#00C851',
 				DANGER: '#FF4444',
-				TAB_BAR_BG: '#F8E2DF',
 			},
 			light: {
-				BACKGROUND: '#F6F8FD',
-				SURFACE: '#ffffff',
-				PRIMARY: '#F75843',
-				SECONDARY: '#8ACA3F',
-				TERTIARY: '#FCEE21',
-				ON_BACKGROUND: '#121212',
-				ON_SURFACE: '#121212',
-				ON_PRIMARY: '#ffffff',
-				ON_SECONDARY: '#ffffff',
-				ON_TERTIARY: '#121212',
+				BACKGROUND: '#8ACA3F',
+				SURFACE: '#8ACA3F',
+				PRIMARY: '#E3C052',
+				ON_BACKGROUND: '#ffffff',
+				ON_SURFACE: '#ffffff',
+				ON_PRIMARY: '#11302E',
 			},
 			dark: {
-				BACKGROUND: '#121212',
-				SURFACE: '#1F1F1F',
-				PRIMARY: '#F75843',
-				SECONDARY: '#8ACA3F',
-				TERTIARY: '#FCEE21',
-				ON_BACKGROUND: '#dddddd',
+				BACKGROUND: '#8ACA3F',
+				SURFACE: '#8ACA3F',
+				PRIMARY: '#E3C052',
+				ON_BACKGROUND: '#ffffff',
 				ON_SURFACE: '#ffffff',
-				ON_PRIMARY: '#ffffff',
-				ON_SECONDARY: '#ffffff',
-				ON_TERTIARY: '#121212',
+				ON_PRIMARY: '#11302E',
 			},
 		},
 	},
