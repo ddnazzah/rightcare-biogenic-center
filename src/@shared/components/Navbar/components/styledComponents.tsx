@@ -2,7 +2,7 @@
  * @Author: Dieu-Donne Nazzah
  * @Date: 2021-11-19 02:14:04
  * @Last Modified by: Dieu-Donne Nazzah
- * @Last Modified time: 2021-11-26 02:23:53
+ * @Last Modified time: 2021-11-26 02:27:21
  */
 
 import bg from '@shared/assets/images/oriental.png';
@@ -10,14 +10,14 @@ import { device } from '@shared/utils';
 import { AiOutlineClose } from 'react-icons/ai';
 import { HiMenuAlt3 } from 'react-icons/hi';
 import Scrollspy from 'react-scrollspy';
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 
-const smoothScroll = keyframes`
- 0% { height: 100px; width: 100px; }
- 30% { height: 400px; width: 400px; opacity: 1 }
- 40% { height: 405px; width: 405px; opacity: 0.3; }
- 100% { height: 100px; width: 100px; opacity: 0.6; }
-`;
+// const smoothScroll = keyframes`
+//  0% { height: 100px; width: 100px; }
+//  30% { height: 400px; width: 400px; opacity: 1 }
+//  40% { height: 405px; width: 405px; opacity: 0.3; }
+//  100% { height: 100px; width: 100px; opacity: 0.6; }
+// `;
 
 // const smoothScrollAnimation = css`
 // 	${smoothScroll} 1s forwards;
