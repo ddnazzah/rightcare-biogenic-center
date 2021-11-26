@@ -2,11 +2,10 @@
  * @Author: Dieu-Donne Nazzah
  * @Date: 2021-11-19 04:07:12
  * @Last Modified by: Dieu-Donne Nazzah
- * @Last Modified time: 2021-11-26 00:51:57
+ * @Last Modified time: 2021-11-26 02:23:19
  */
 
 import { Rating } from '@shared/components/Rating';
-import { useSettings } from '@shared/hooks';
 import React from 'react';
 import styled from 'styled-components';
 
@@ -18,7 +17,7 @@ interface Props {
 const TopSelling = (props: Props) => {
 	const { image, name } = props;
 
-	const { theme } = useSettings();
+	// const { theme } = useSettings();
 
 	return (
 		<TopSellingWrapper>
