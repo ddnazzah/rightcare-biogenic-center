@@ -2,9 +2,10 @@
  * @Author: Dieu-Donne Nazzah
  * @Date: 2021-11-19 02:14:04
  * @Last Modified by: Dieu-Donne Nazzah
- * @Last Modified time: 2021-11-25 08:57:49
+ * @Last Modified time: 2021-11-26 07:15:30
  */
 
+import bestSelling from '@shared/assets/images/bestSelling.png';
 import bg from '@shared/assets/images/bg.png';
 import cta from '@shared/assets/images/cta.png';
 import { device } from '@shared/utils';
@@ -60,9 +61,11 @@ export const LeftCol = styled.div({
 
 export const HeroImage = styled.img({
 	position: 'absolute',
-	top: '4em',
+	top: '0em',
 	right: -300,
 	zIndex: -1,
+	height: '100%',
+	width: 'auto',
 	[device.smallDevices]: {
 		right: -250,
 	},
@@ -266,27 +269,56 @@ export const BestPriceText = styled.p({});
 export const BestSellingSection = styled.section({});
 
 export const BestSellingRow = styled.div({
-	marginTop: '5em',
 	display: 'grid',
 	[device.mediumDevices]: {
 		justifyContent: 'center',
 		alignItems: 'center',
 		gridTemplateColumns: 'repeat(auto-fit, minmax(12rem, 1fr))',
 	},
+	position: 'relative',
+	'&:before': {
+		content: '""',
+		position: 'absolute',
+		backgroundImage: `url(${bestSelling})`,
+		backgroundSize: 'contain',
+		backgroundRepeat: 'no-repeat',
+		backgroundPosition: 'top',
+		top: 0,
+		left: 0,
+		width: '100%',
+		height: '100%',
+		zIndex: -1,
+		opacity: 0.7,
+		[device.mediumDevices]: {
+			backgroundPosition: 'center',
+		},
+	},
+});
+
+export const BestSellingTitle = styled.h1({
+	margin: '2em 0',
+	fontSize: '2em',
+	textAlign: 'center',
+	fontWeight: '600',
 });
 
 export const BestSellingImage = styled.img({
 	order: '-1',
-	width: '40%',
+	width: '30%',
 	margin: '0 auto',
 	marginBottom: '1em',
+	minWidth: '10rem',
 	[device.mediumDevices]: {
 		order: 'unset',
-		width: '85%',
+		width: '55%',
 	},
 });
 
-export const BestSellingList = styled.ul({});
+export const BestSellingList = styled.ul({
+	[device.mediumDevices]: {
+		margin: '0 auto',
+	},
+});
 
 export const BestSellingListItem = styled.li({
 	paddingBottom: '1.5em',
@@ -297,10 +329,10 @@ export const BestSellingListItem = styled.li({
 export const BestSellingInfo = styled.div({});
 
 export const BestSellingListTitle = styled.h4({
-	fontWeight: '500',
 	lineHeight: '1.5em',
-	[device.mediumDevices]: {
-		fontSize: '.7rem',
+	fontSize: '0.9em',
+	[device.largeDevices]: {
+		fontSize: '1em',
 	},
 });
 
@@ -319,19 +351,6 @@ export const ContactSection = styled.section({
 	textAlign: 'center',
 	position: 'relative',
 	backgroundAttachment: 'fixed',
-	'&:after': {
-		content: '""',
-		position: 'absolute',
-		top: 0,
-		left: 0,
-		width: '100%',
-		height: '100%',
-		background: 'rgba(0, 0, 0, 0.5)',
-		zIndex: 1,
-	},
-	'*': {
-		zIndex: '100 !important',
-	},
 });
 
 export const CallIcon = styled(IoMdCall)(({ theme }) => ({
@@ -349,12 +368,13 @@ export const ContactCaption = styled.p<{ secondary?: boolean }>(
 export const ContactNumber = styled.a<{ secondary?: boolean }>(
 	({ secondary }) => ({
 		fontWeight: '500',
-		fontSize: secondary ? '1em' : '2em',
+		fontSize: secondary ? '1em' : '1.5em',
 		marginTop: '1em',
 		display: 'block',
 		paddingLeft: '0.5em',
 		paddingRight: '0.5em',
 		[device.mediumDevices]: {
+			fontSize: secondary ? '1em' : '2em',
 			paddingLeft: '2em',
 			paddingRight: '2em',
 		},
@@ -366,12 +386,18 @@ export const ContactList = styled.ul({
 	alignItems: 'center',
 	justifyContent: 'center',
 	margin: '1.5em 0.5em',
+	flexDirection: 'column',
+	[device.mediumDevices]: {
+		flexDirection: 'row',
+	},
 });
 
 export const ContactListItem = styled.li<{ divider?: boolean }>(
 	({ divider, theme }) => ({
 		padding: '0.6em',
-		borderRight: divider ? `1px dashed ${theme.PRIMARY}` : 'none',
+		[device.mediumDevices]: {
+			borderRight: divider ? `1px dashed ${theme.PRIMARY}` : 'none',
+		},
 	}),
 );
 

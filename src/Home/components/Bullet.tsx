@@ -2,10 +2,9 @@
  * @Author: Dieu-Donne Nazzah
  * @Date: 2021-11-19 21:28:14
  * @Last Modified by: Dieu-Donne Nazzah
- * @Last Modified time: 2021-11-25 00:31:12
+ * @Last Modified time: 2021-11-26 04:34:20
  */
 
-import { device } from '@shared/utils';
 import React from 'react';
 import { BsBrightnessHigh } from 'react-icons/bs';
 import { IoRocketSharp } from 'react-icons/io5';
@@ -31,17 +30,13 @@ const Wrapper = styled.div<{ check?: boolean }>(({ theme, check }) => ({
 	backgroundColor: check ? 'transparent' : theme.PRIMARY,
 	display: 'inline-flex',
 	padding: '0.15em',
-	width: check ? '1em' : '3.7em',
-	height: check ? '1em' : '3.7em',
+	width: check ? '1em' : '2em',
+	height: check ? '1em' : '2em',
 	borderRadius: '100%',
 	alignItems: 'center',
 	justifyContent: 'center',
 	marginRight: '0.5em',
 	flexShrink: 0,
-	[device.mediumDevices]: {
-		width: check ? '1em' : '2.7em',
-		height: check ? '1em' : '2.7em',
-	},
 }));
 
 const BsCheckIcon = styled(IoRocketSharp)(({ theme }) => ({
@@ -50,5 +45,5 @@ const BsCheckIcon = styled(IoRocketSharp)(({ theme }) => ({
 
 const BsBrightnessHighIcon = styled(BsBrightnessHigh)(({ theme }) => ({
 	color: `${theme.ON_PRIMARY}`,
-	fontSize: '2em',
+	fontSize: '1em',
 }));

@@ -2,15 +2,14 @@
  * @Author: Dieu-Donne Nazzah
  * @Date: 2021-11-19 00:48:07
  * @Last Modified by: Dieu-Donne Nazzah
- * @Last Modified time: 2021-11-26 01:59:08
+ * @Last Modified time: 2021-11-26 07:11:24
  */
 
 import { Products } from '@shared/assets/data';
-import aboutImage from '@shared/assets/images/about.png';
+import aboutImage from '@shared/assets/images/about2.png';
 import testimonial from '@shared/assets/images/avatar.svg';
 import logo from '@shared/assets/images/logo.png';
-import heroImage from '@shared/assets/images/mint.png';
-import bottle from '@shared/assets/images/revive.png';
+import heroImage from '@shared/assets/images/mint2.png';
 import { Button, MainLayout } from '@shared/components';
 import React from 'react';
 import { Bullet, Product, TopSelling } from './components';
@@ -33,10 +32,10 @@ import {
 	BestSellingInfo,
 	BestSellingList,
 	BestSellingListItem,
-	BestSellingListText,
 	BestSellingListTitle,
 	BestSellingRow,
 	BestSellingSection,
+	BestSellingTitle,
 	CallIcon,
 	ContactCaption,
 	ContactList,
@@ -80,57 +79,20 @@ import {
 	TopSellingSection,
 	TSList,
 } from './components/styledComponents';
-
 interface Props {}
 
 const Home = (props: Props) => {
+	const bestProduct = Products[1];
+
+	const half = Math.ceil(bestProduct.benefits.length / 2);
+
+	const firstHalf = bestProduct.benefits.slice(0, half);
+
+	const secondHalf = bestProduct.benefits.slice(-half);
+
 	return (
 		<MainLayout>
 			<HeroSection id="homeSection">
-				{/* <Particles
-					style={{
-						width: '100%',
-						height: '100%',
-						position: 'absolute',
-						top: '0',
-						left: '0',
-						bottom: '0',
-					}}
-					params={{
-						particles: {
-							number: {
-								value: 160,
-								density: {
-									enable: false,
-								},
-							},
-							size: {
-								value: 10,
-								random: true,
-							},
-							move: {
-								direction: 'bottom',
-								out_mode: 'out',
-							},
-							line_linked: {
-								enable: false,
-							},
-						},
-						interactivity: {
-							events: {
-								onclick: {
-									enable: true,
-									mode: 'remove',
-								},
-							},
-							modes: {
-								remove: {
-									particles_nb: 10,
-								},
-							},
-						},
-					}}
-				/> */}
 				<Container>
 					<HeroWrapper>
 						<LeftCol>
@@ -244,83 +206,42 @@ const Home = (props: Props) => {
 				<Container>
 					<SectionSubtitle>BEST SELLING</SectionSubtitle>
 					<SectionTitle>Essential Product</SectionTitle>
+					<BestSellingTitle>{bestProduct.name}</BestSellingTitle>
 					<BestSellingRow>
 						<BestSellingList>
-							<BestSellingListItem>
-								<Bullet />
-								<BestSellingInfo>
-									<BestSellingListTitle>
-										PROMOTES RELAXATION
-									</BestSellingListTitle>
-									<BestSellingListText>
-										Lorem, ipsum dolor sit amet consectetur
-										adipisicing elit.
-									</BestSellingListText>
-								</BestSellingInfo>
-							</BestSellingListItem>
-							<BestSellingListItem>
-								<Bullet />
-								<BestSellingInfo>
-									<BestSellingListTitle>
-										PROMOTES RELAXATION
-									</BestSellingListTitle>
-									<BestSellingListText>
-										Lorem, ipsum dolor sit amet consectetur
-										adipisicing elit.
-									</BestSellingListText>
-								</BestSellingInfo>
-							</BestSellingListItem>
-							<BestSellingListItem>
-								<Bullet />
-								<BestSellingInfo>
-									<BestSellingListTitle>
-										PROMOTES RELAXATION
-									</BestSellingListTitle>
-									<BestSellingListText>
-										Lorem, ipsum dolor sit amet consectetur
-										adipisicing elit.
-									</BestSellingListText>
-								</BestSellingInfo>
-							</BestSellingListItem>
+							{firstHalf.map((benefit, index) => (
+								<BestSellingListItem key={index.toString()}>
+									<Bullet />
+									<BestSellingInfo>
+										<BestSellingListTitle>
+											{benefit}
+										</BestSellingListTitle>
+										{/* <BestSellingListText>
+											Lorem, ipsum dolor sit amet
+											consectetur adipisicing elit.
+										</BestSellingListText> */}
+									</BestSellingInfo>
+								</BestSellingListItem>
+							))}
 						</BestSellingList>
-						<BestSellingImage src={bottle} />
+
+						<BestSellingImage src={bestProduct.image} />
+
 						<BestSellingList>
-							<BestSellingListItem>
-								<Bullet />
-								<BestSellingInfo>
-									<BestSellingListTitle>
-										PROMOTES RELAXATION
-									</BestSellingListTitle>
-									<BestSellingListText>
-										Lorem, ipsum dolor sit amet consectetur
-										adipisicing elit.
-									</BestSellingListText>
-								</BestSellingInfo>
-							</BestSellingListItem>
-							<BestSellingListItem>
-								<Bullet />
-								<BestSellingInfo>
-									<BestSellingListTitle>
-										PROMOTES RELAXATION
-									</BestSellingListTitle>
-									<BestSellingListText>
-										Lorem, ipsum dolor sit amet consectetur
-										adipisicing elit.
-									</BestSellingListText>
-								</BestSellingInfo>
-							</BestSellingListItem>
-							<BestSellingListItem>
-								<Bullet />
-								<BestSellingInfo>
-									<BestSellingListTitle>
-										PROMOTES RELAXATION
-									</BestSellingListTitle>
-									<BestSellingListText>
-										Lorem, ipsum dolor sit amet consectetur
-										adipisicing elit.
-									</BestSellingListText>
-								</BestSellingInfo>
-							</BestSellingListItem>
+							{secondHalf.map((benefit, index) => (
+								<BestSellingListItem key={index.toString()}>
+									<Bullet />
+									<BestSellingInfo>
+										<BestSellingListTitle>
+											{benefit}
+										</BestSellingListTitle>
+										{/* <BestSellingListText>
+											Lorem, ipsum dolor sit amet
+											consectetur adipisicing elit.
+										</BestSellingListText> */}
+									</BestSellingInfo>
+								</BestSellingListItem>
+							))}
 						</BestSellingList>
 					</BestSellingRow>
 				</Container>
@@ -482,7 +403,7 @@ export default Home;
 
 const BS_Settings = {
 	dots: true,
-	infinite: true,
+	// infinite: true,
 	speed: 5000,
 	autoplaySpeed: 10,
 	slidesToShow: 4,
@@ -524,7 +445,7 @@ const BS_Settings = {
 
 const TS_Settings = {
 	dots: true,
-	infinite: true,
+	// infinite: true,
 	speed: 1000,
 	slidesToShow: 3,
 	slidesToScroll: 1,

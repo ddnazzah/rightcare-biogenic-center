@@ -2,7 +2,7 @@
  * @Author: Dieu-Donne Nazzah
  * @Date: 2021-11-19 04:07:12
  * @Last Modified by: Dieu-Donne Nazzah
- * @Last Modified time: 2021-11-26 01:54:13
+ * @Last Modified time: 2021-11-26 04:34:30
  */
 
 import { Rating } from '@shared/components/Rating';
