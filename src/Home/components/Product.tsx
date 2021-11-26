@@ -2,7 +2,7 @@
  * @Author: Dieu-Donne Nazzah
  * @Date: 2021-11-19 04:07:12
  * @Last Modified by: Dieu-Donne Nazzah
- * @Last Modified time: 2021-11-25 22:55:18
+ * @Last Modified time: 2021-11-26 01:54:13
  */
 
 import { Rating } from '@shared/components/Rating';
@@ -26,8 +26,8 @@ const Product = (props: Props) => {
 				<Rating rating={4.5} />
 				<ProductName>{name}</ProductName>
 				<ProductDesc>
-					{descs?.map((desc) => (
-						<ProductDescItem>
+					{descs?.map((desc, index) => (
+						<ProductDescItem key={index.toString()}>
 							<Bullet check />
 							{desc}
 						</ProductDescItem>

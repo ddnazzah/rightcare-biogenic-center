@@ -2,7 +2,7 @@
  * @Author: Dieu-Donne Nazzah
  * @Date: 2021-11-19 00:48:07
  * @Last Modified by: Dieu-Donne Nazzah
- * @Last Modified time: 2021-11-25 09:03:34
+ * @Last Modified time: 2021-11-26 01:59:08
  */
 
 import { Products } from '@shared/assets/data';
@@ -169,6 +169,7 @@ const Home = (props: Props) => {
 							<TopSelling
 								name={product.name}
 								image={product.image}
+								key={index.toString()}
 							/>
 						))}
 					</TSList>
@@ -205,8 +206,8 @@ const Home = (props: Props) => {
 					<SectionSubtitle>ONLINE STORE</SectionSubtitle>
 					<SectionTitle>Popular Products</SectionTitle>
 					<ProductList>
-						{Products.map((product) => (
-							<ProductListItem>
+						{Products.map((product, index) => (
+							<ProductListItem key={index.toString()}>
 								<Product
 									name={product.name}
 									image={product.image}
@@ -485,7 +486,7 @@ const BS_Settings = {
 	speed: 5000,
 	autoplaySpeed: 10,
 	slidesToShow: 4,
-	slidesToScroll: 4,
+	slidesToScroll: 1,
 	centerMode: true,
 	autoplay: true,
 	arrows: false,
@@ -526,7 +527,7 @@ const TS_Settings = {
 	infinite: true,
 	speed: 1000,
 	slidesToShow: 3,
-	slidesToScroll: 3,
+	slidesToScroll: 1,
 	centerMode: true,
 	autoplay: true,
 	arrows: false,

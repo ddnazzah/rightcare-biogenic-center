@@ -23,7 +23,7 @@ const Rating: React.FC<Props> = ({
 			{Array(fullStars)
 				.fill('')
 				.map((_, index) => (
-					<FullStar name="star" size={size} />
+					<FullStar name="star" size={size} key={index.toString()} />
 				))}
 			{Array(halfStars)
 				.fill('')
@@ -37,7 +37,11 @@ const Rating: React.FC<Props> = ({
 			{Array(emptyStars)
 				.fill('')
 				.map((_, index) => (
-					<EmptyStar name="star-outline" size={size} />
+					<EmptyStar
+						name="star-outline"
+						size={size}
+						key={index.toString()}
+					/>
 				))}
 		</StarRating>
 	);
