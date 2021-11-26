@@ -2,7 +2,7 @@
  * @Author: Dieu-Donne Nazzah
  * @Date: 2021-11-19 02:20:58
  * @Last Modified by: Dieu-Donne Nazzah
- * @Last Modified time: 2021-11-21 01:53:42
+ * @Last Modified time: 2021-11-26 02:55:56
  */
 
 import bg from '@shared/assets/images/oriental.png';
@@ -15,6 +15,7 @@ export const GlobalStyle = createGlobalStyle(({ theme }) => ({
 	},
 	html: {
 		scrollBehavior: 'smooth',
+		overflowX: 'hidden',
 	},
 	a: {
 		color: theme.ON_BACKGROUND,

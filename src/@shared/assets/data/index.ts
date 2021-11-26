@@ -2,7 +2,7 @@
  * @Author: Dieu-Donne Nazzah
  * @Date: 2021-11-24 19:27:51
  * @Last Modified by: Dieu-Donne Nazzah
- * @Last Modified time: 2021-11-24 21:13:26
+ * @Last Modified time: 2021-11-26 04:09:52
  */
 
 import cardibetter from '@shared/assets/images/cardibetter.png';
@@ -53,7 +53,7 @@ export const Products = [
 			'Improve blood circulation',
 			'Lower blood pressure',
 			'Improves heart function',
-			'Helpful for hypertension/Asthma/Stroke/Arthritis',
+			'Helpful for hypertension / Asthma / Stroke / Arthritis',
 		],
 	},
 	{
@@ -175,8 +175,7 @@ export const Products = [
 			'Stables blood pressure',
 			'Immune system booster',
 			'Female Infertility',
-			'Anti',
-			'virus & Anti HIV Allergies ',
+			'Anti-virus & Anti HIV Allergies ',
 			'Fibroid/Cancer',
 			'Fatigue & Impotency',
 			'It lowers cholesterol',
