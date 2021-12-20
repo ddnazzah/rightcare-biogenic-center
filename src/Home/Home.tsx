@@ -2,7 +2,7 @@
  * @Author: Dieu-Donne Nazzah
  * @Date: 2021-11-19 00:48:07
  * @Last Modified by: Dieu-Donne Nazzah
- * @Last Modified time: 2021-11-26 07:11:24
+ * @Last Modified time: 2021-12-19 23:30:04
  */
 
 import { Products } from '@shared/assets/data';
@@ -12,7 +12,7 @@ import logo from '@shared/assets/images/logo.png';
 import heroImage from '@shared/assets/images/mint2.png';
 import { Button, MainLayout } from '@shared/components';
 import React from 'react';
-import { Bullet, Product, TopSelling } from './components';
+import { Bullet, Distributors, Product, TopSelling } from './components';
 import {
 	AboutHeading,
 	AboutImage,
@@ -48,6 +48,8 @@ import {
 	CopyrightBrandText,
 	CopyrightSection,
 	CopyrightText,
+	DistributorsCaption,
+	DistributorsSection,
 	FooterColumn,
 	FooterList,
 	FooterListItem,
@@ -284,6 +286,19 @@ const Home = (props: Props) => {
 					<Button text="CONTACT US" href="tel:+233246921636" />
 				</Container>
 			</ContactSection>
+
+			<DistributorsSection>
+				<Container>
+					<SectionSubtitle>Business Opportunity</SectionSubtitle>
+					<SectionTitle>Regional Distributors</SectionTitle>
+					<DistributorsCaption>
+						Order Kedi (VitaNature) products directly from a member
+						near you or become an Independent Distributor to take
+						advantage of the Kedi (VitaNature) Business Opportunity
+					</DistributorsCaption>
+					<Distributors />
+				</Container>
+			</DistributorsSection>
 
 			<TestimonialSection>
 				<Container fluid>
