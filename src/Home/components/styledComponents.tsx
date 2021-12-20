@@ -2,7 +2,7 @@
  * @Author: Dieu-Donne Nazzah
  * @Date: 2021-11-19 02:14:04
  * @Last Modified by: Dieu-Donne Nazzah
- * @Last Modified time: 2021-11-26 07:15:30
+ * @Last Modified time: 2021-12-20 01:06:09
  */
 
 import bestSelling from '@shared/assets/images/bestSelling.png';
@@ -342,8 +342,65 @@ export const BestSellingListText = styled.p({
 	},
 });
 
-// Styles for the Contact section
+// Styles for the Distributor section
 
+export const DistributorsSection = styled.section({});
+
+export const DistributorsCaption = styled.p(({ theme }) => ({
+	textAlign: 'center',
+	margin: '0 auto',
+	fontSize: '1em',
+	maxWidth: 'calc(100% - 200px)',
+}));
+
+export const TableWrapper = styled.div({
+	paddingTop: '5em',
+	overflowX: 'auto',
+});
+
+export const Table = styled.table({
+	margin: '1em auto',
+	boxShadow: 'rgba(0, 0, 0, 0.3) 2px 8px 8px',
+	borderCollapse: 'collapse',
+	// '&::-webkit-scrollbar': {
+	// 	backgroundColor: 'red',
+	// },
+	// '&::-webkit-scrollbar-thumb': {
+	// 	borderRadius: '10px',
+	// 	backgroundColor: 'rgba(255,0,0,0.8)',
+	// },
+	// '&::-webkit-scrollbar-thumb:window-inactive': {
+	// 	/*Your styles here*/
+	// },
+});
+
+export const TableHead = styled.thead({
+	backgroundColor: '#fff',
+	color: '#16443D',
+});
+
+export const TableHeadRow = styled.tr({});
+
+export const TableHeadCell = styled.th({
+	padding: '1em 2em',
+	whiteSpace: 'nowrap',
+});
+
+export const TableBody = styled.tbody({});
+
+export const TableBodyRow = styled.tr<{ glassy?: boolean }>(({ glassy }) => ({
+	background: glassy ? 'rgba( 255, 255, 255, 0.05)' : undefined,
+	backdropFilter: glassy ? 'blur( 1px )' : undefined,
+}));
+
+export const TableBodyCell = styled.td<{ center?: boolean }>(({ center }) => ({
+	textAlign: center ? 'center' : 'left',
+	padding: '0.5em 2em',
+	whiteSpace: 'nowrap',
+	margin: '0 auto',
+}));
+
+// Styles for the Contact section
 export const ContactSection = styled.section({
 	backgroundImage: `url(${bg})`,
 	backgroundSize: 'cover',
